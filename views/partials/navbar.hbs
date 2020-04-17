@@ -1,0 +1,31 @@
+<nav class="nav">
+    <a href="/" class="nav__logo">LOGO</a>
+    <ul class="nav__navigation">
+        {{#if isHome}}
+        <li><a class="active" href="/">Home</a></li>
+        {{else}}
+        <li><a href="/">Home</a></li>
+        {{/if}}
+
+        {{#if isAbout}}
+        <li><a class="active" href="/about">About</a></li>
+        {{else}}
+        <li><a href="/about">About</a></li>
+        {{/if}}
+
+        {{#if isAuth}}
+            {{#if isRoom}}
+                <li><a class="active" href="/room">My room</a></li>
+            {{else}}
+                <li><a href="/room">My room</a></li>
+            {{/if}}
+                <li><a href="/logout">Logout</a></li>
+        {{else}}
+            {{#if isLogin}}
+                <li><a class="active" href="/login">Login</a></li>
+            {{else}}
+                <li><a href="/login">Login</a></li>
+            {{/if}}
+        {{/if}}
+    </ul>
+</nav>
